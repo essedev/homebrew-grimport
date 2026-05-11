@@ -1,6 +1,6 @@
 cask "portsage" do
-  version "0.8.3"
-  sha256 "e42d94244a084439eb32ff4479d586ac870a5d7bc2161b459d75b60c60d991b2"
+  version "0.9.0"
+  sha256 "5e27ac7054ea2fb56a513d4f40731e4bdb86b3a4080bea69d4c08da5a6d4e8e3"
 
   url "https://github.com/essedev/portsage/releases/download/v#{version}/Portsage_#{version}_aarch64.dmg"
   name "Portsage"
@@ -8,6 +8,7 @@ cask "portsage" do
   homepage "https://github.com/essedev/portsage"
 
   app "Portsage.app"
+  binary "#{appdir}/Portsage.app/Contents/MacOS/portsage-cli", target: "portsage"
 
   postflight do
     system_command "/usr/bin/xattr",
